@@ -31,7 +31,7 @@ public class FileService {
         return false;
     }
 
-    private void checkFile() {
+    private synchronized void checkFile() {
         ipFile = Paths.get(fileName);
         try {
             if(ipFile != null) {
